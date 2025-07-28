@@ -8,8 +8,8 @@
   *    Version: 1.1
   **********************************************************************************************************************************************************/
 
-  require __DIR__ . "config.php";
-  require __DIR__ . "functions.php";
+  require __DIR__ . "/config.php";
+  require __DIR__ . "/functions.php";
 
   ignore_user_abort(true);
   set_time_limit(0);

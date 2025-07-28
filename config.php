@@ -1,5 +1,5 @@
 <?php
-  $alert to_email = true;                             // Whether to sendnotifications to eMail
+  $alert_to_email = true;                             // Whether to sendnotifications to eMail
 
   $alert_to_slack = true;                             // Whether to send notifications to Slack
   $slackAPIkey = "xoxb-XXXXXXXXXXXXXXXXXXXXXXXXXXX";  // Slack API Key

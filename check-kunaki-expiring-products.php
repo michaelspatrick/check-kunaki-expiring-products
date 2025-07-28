@@ -10,8 +10,8 @@
   *    Version: 1.1
   **********************************************************************************************************************************************************/
 
-  require __DIR__ . "config.php";
-  require __DIR__ . "functions.php";
+  require __DIR__ . "/config.php";
+  require __DIR__ . "/functions.php";
 
   // Kunaki URLs
   $loginURL = "https://kunaki.com/accounting/CheckLogin.asp";
@@ -94,7 +94,7 @@
         $errorText = $result['error_text'] ?? ($result['error'] ?? 'Unknown error');
         $message = "❌ *Kunaki Wholesale Renewal Order Failed*\nError Code: `{$errorCode}`\nMessage: `{$errorText}`";
     }
-    if ($alert to_slack) sendToSlack($slackChannel, $message, $slackAPIkey);
+    if ($alert_to_slack) sendToSlack($slackChannel, $message, $slackAPIkey);
 
     print_r($result);
   }
@@ -102,7 +102,7 @@
   if (count($warnings) > 0) {
     $warnings_str = implode("\n", $warnings);
     $subject = "You have Kunaki products that will expire in less than ".$life_left." days!";
-    if ($alert to_email) mail($email, $subject, $warnings_str, $headers1, $headers2);
-    if ($alert to_slack) sendToSlack($slackChannel, $subject."\n".$warnings_str, $slackAPIkey);
+    if ($alert_to_email) mail($email, $subject, $warnings_str, $headers1, $headers2);
+    if ($alert_to_slack) sendToSlack($slackChannel, $subject."\n".$warnings_str, $slackAPIkey);
   }
 ?>
