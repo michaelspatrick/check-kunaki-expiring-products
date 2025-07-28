@@ -6,7 +6,7 @@ A modular PHP-based monitoring and automation toolkit for Kunaki publishers. Thi
 
 ## 📦 Included Scripts
 
-### `slack-expiring-products.php`
+### `check-kunaki-expiring-products.php`
 - Logs into Kunaki
 - Scrapes product expiration data
 - Alerts for products nearing the 180-day deletion window
